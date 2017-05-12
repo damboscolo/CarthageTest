@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "af449807d58505557ebe563dfa1f08b2"
+build_time: [547866021, 787017000]
+inputs:
+  "/Users/danieleboscolo/Documents/Workspace/CarthageTest/Carthage/Checkouts/TKCurrencyTextField/TKCurrencyTextField/Classes/Double+Currency.swift": [9223372036854775807, 0]
+  "/Users/danieleboscolo/Documents/Workspace/CarthageTest/Carthage/Checkouts/TKCurrencyTextField/TKCurrencyTextField/Classes/String+Number.swift": [9223372036854775807, 0]
+  "/Users/danieleboscolo/Documents/Workspace/CarthageTest/Carthage/Checkouts/TKCurrencyTextField/TKCurrencyTextField/Classes/TKCurrencyTextField.swift": [9223372036854775807, 0]

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftToast
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func toastButtonTouchUpInside(_ sender: Any) {
+        let config = SwiftToastConfig(text: "Damo", image: nil, backgroundColor: UIColor.green, textColor: UIColor.white, font: nil, duration: 3.0, statusBarStyle: nil, delegate: nil)
+        SwiftToast.shared.present(config)
+    }
 
 }
 

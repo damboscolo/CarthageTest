@@ -1,0 +1,10 @@
+framework module TKCurrencyTextField {
+  umbrella header "TKCurrencyTextField.h"
+
+  export *
+  module * { export * }
+}
+
+module TKCurrencyTextField.Swift {
+    header "TKCurrencyTextField-Swift.h"
+}

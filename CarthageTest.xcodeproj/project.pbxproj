@@ -14,6 +14,10 @@
 		830BB3011EC53AD500A11529 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 830BB2FF1EC53AD500A11529 /* LaunchScreen.storyboard */; };
 		830BB30C1EC53AD500A11529 /* CarthageTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830BB30B1EC53AD500A11529 /* CarthageTestTests.swift */; };
 		830BB3171EC53AD500A11529 /* CarthageTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830BB3161EC53AD500A11529 /* CarthageTestUITests.swift */; };
+		8345ED8B1EC5DC0800AB0602 /* SwiftToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8345ED851EC5DBC800AB0602 /* SwiftToast.framework */; };
+		8345ED8C1EC5DC0800AB0602 /* SwiftToast.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8345ED851EC5DBC800AB0602 /* SwiftToast.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8345ED8E1EC5DC1900AB0602 /* TKCurrencyTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830BB3261EC53C4600A11529 /* TKCurrencyTextField.framework */; };
+		8345ED8F1EC5DC1900AB0602 /* TKCurrencyTextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 830BB3261EC53C4600A11529 /* TKCurrencyTextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8345ED8D1EC5DC0800AB0602 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8345ED8F1EC5DC1900AB0602 /* TKCurrencyTextField.framework in Embed Frameworks */,
+				8345ED8C1EC5DC0800AB0602 /* SwiftToast.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		830BB2F31EC53AD500A11529 /* CarthageTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarthageTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		830BB2F61EC53AD500A11529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +66,8 @@
 		830BB3121EC53AD500A11529 /* CarthageTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarthageTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		830BB3161EC53AD500A11529 /* CarthageTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarthageTestUITests.swift; sourceTree = "<group>"; };
 		830BB3181EC53AD500A11529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		830BB3261EC53C4600A11529 /* TKCurrencyTextField.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TKCurrencyTextField.framework; path = Carthage/Build/iOS/TKCurrencyTextField.framework; sourceTree = "<group>"; };
+		8345ED851EC5DBC800AB0602 /* SwiftToast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftToast.framework; path = Carthage/Build/iOS/SwiftToast.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8345ED8E1EC5DC1900AB0602 /* TKCurrencyTextField.framework in Frameworks */,
+				8345ED8B1EC5DC0800AB0602 /* SwiftToast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +104,7 @@
 				830BB30A1EC53AD500A11529 /* CarthageTestTests */,
 				830BB3151EC53AD500A11529 /* CarthageTestUITests */,
 				830BB2F41EC53AD500A11529 /* Products */,
+				830BB3251EC53C4600A11529 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +149,15 @@
 			path = CarthageTestUITests;
 			sourceTree = "<group>";
 		};
+		830BB3251EC53C4600A11529 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8345ED851EC5DBC800AB0602 /* SwiftToast.framework */,
+				830BB3261EC53C4600A11529 /* TKCurrencyTextField.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +168,8 @@
 				830BB2EF1EC53AD500A11529 /* Sources */,
 				830BB2F01EC53AD500A11529 /* Frameworks */,
 				830BB2F11EC53AD500A11529 /* Resources */,
+				830BB3241EC53B4A00A11529 /* Run Script */,
+				8345ED8D1EC5DC0800AB0602 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +291,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		830BB3241EC53B4A00A11529 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		830BB2EF1EC53AD500A11529 /* Sources */ = {
@@ -416,6 +468,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BZ2LF24KZ7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = CarthageTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.damboscolo.CarthageTest;
@@ -429,6 +486,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BZ2LF24KZ7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = CarthageTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.damboscolo.CarthageTest;
@@ -514,6 +576,7 @@
 				830BB31D1EC53AD500A11529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		830BB31E1EC53AD500A11529 /* Build configuration list for PBXNativeTarget "CarthageTestTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +585,7 @@
 				830BB3201EC53AD500A11529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		830BB3211EC53AD500A11529 /* Build configuration list for PBXNativeTarget "CarthageTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +594,7 @@
 				830BB3231EC53AD500A11529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
