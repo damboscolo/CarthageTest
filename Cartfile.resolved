@@ -1,2 +1,3 @@
-github "damboscolo/SwiftToast" "0.1.0"
+github "damboscolo/SwiftToast" "1.1.1"
 github "tokenlab/TKCurrencyTextField" "1.0.1"
+github "tokenlab/TKInsertCodeView" "1.0.1"

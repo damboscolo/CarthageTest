@@ -1,56 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KgC-U2-J7j">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--CarthageTests-->
+        <scene sceneID="SZu-YU-3Wy">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CarthageTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="Qep-14-GBI" customClass="ViewController" customModule="CarthageTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" keyboardDismissMode="interactive" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="1uq-2E-cie">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RpK-tw-7ML" customClass="TKCurrencyTextField" customModule="TKCurrencyTextField">
-                                <rect key="frame" x="30" y="70" width="315" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgx-1W-msQ">
-                                <rect key="frame" x="30" y="150" width="315" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="SwiftToast">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toastButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GOx-1F-Gm8"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="RpK-tw-7ML" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Bbp-9m-caq"/>
-                            <constraint firstItem="Rgx-1W-msQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="anS-aw-lZG"/>
-                            <constraint firstItem="Rgx-1W-msQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="exF-gX-Y4P"/>
-                            <constraint firstAttribute="trailing" secondItem="RpK-tw-7ML" secondAttribute="trailing" constant="30" id="fJT-2P-ELu"/>
-                            <constraint firstItem="Rgx-1W-msQ" firstAttribute="top" secondItem="RpK-tw-7ML" secondAttribute="bottom" constant="50" id="pBQ-V7-JUM"/>
-                            <constraint firstItem="RpK-tw-7ML" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="v8S-zu-lDd"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="TKCurrencyTextField" id="hp7-M7-ybR">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="W73-io-ltJ">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W73-io-ltJ" id="8TX-ji-FOP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q3b-tI-g0l" customClass="TKCurrencyTextField" customModule="TKCurrencyTextField">
+                                                    <rect key="frame" x="20" y="6" width="335" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Q3b-tI-g0l" firstAttribute="centerY" secondItem="8TX-ji-FOP" secondAttribute="centerY" id="Ais-YF-WuD"/>
+                                                <constraint firstItem="Q3b-tI-g0l" firstAttribute="centerX" secondItem="8TX-ji-FOP" secondAttribute="centerX" id="V9P-Yr-iEX"/>
+                                                <constraint firstItem="Q3b-tI-g0l" firstAttribute="leading" secondItem="8TX-ji-FOP" secondAttribute="leading" constant="20" id="l5L-P2-wcm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="TKInsertCodeView" id="zul-GN-VLF">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="PtL-Ce-eSJ">
+                                        <rect key="frame" x="0.0" y="155.5" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PtL-Ce-eSJ" id="F5t-Vk-3Il">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TcA-1C-Oo1" customClass="TKInsertCodeView" customModule="TKInsertCodeView">
+                                                    <rect key="frame" x="87" y="20" width="200" height="39.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="pEA-x0-J9b"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="secretCode" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="fieldBackgroundColor">
+                                                            <color key="value" red="0.9098039269" green="0.4784313738" blue="0.64313727620000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfFields">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.74509805439999999" green="0.15686275059999999" blue="0.074509806930000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedBorderColor">
+                                                            <color key="value" red="0.0" green="0.45882352939999999" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TcA-1C-Oo1" firstAttribute="centerX" secondItem="F5t-Vk-3Il" secondAttribute="centerX" id="SH2-2O-9lY"/>
+                                                <constraint firstItem="TcA-1C-Oo1" firstAttribute="centerY" secondItem="F5t-Vk-3Il" secondAttribute="centerY" id="SlQ-4x-edG"/>
+                                                <constraint firstItem="TcA-1C-Oo1" firstAttribute="top" secondItem="F5t-Vk-3Il" secondAttribute="top" constant="20" id="n3h-tC-aPP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="SwiftToast" id="ysO-5I-hFk">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="48" id="ClR-4H-niC">
+                                        <rect key="frame" x="0.0" y="291.5" width="375" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ClR-4H-niC" id="U9I-4F-SKb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwl-8E-iqY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
+                                                    <state key="normal" title="Click here to present"/>
+                                                    <connections>
+                                                        <action selector="toastButtonTouchUpInside:" destination="Qep-14-GBI" eventType="touchUpInside" id="YoI-Om-C11"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Uwl-8E-iqY" firstAttribute="top" secondItem="U9I-4F-SKb" secondAttribute="top" id="ZLa-OI-wQc"/>
+                                                <constraint firstAttribute="trailing" secondItem="Uwl-8E-iqY" secondAttribute="trailing" id="l9N-Ib-P33"/>
+                                                <constraint firstItem="Uwl-8E-iqY" firstAttribute="leading" secondItem="U9I-4F-SKb" secondAttribute="leading" id="p8H-2l-Yh8"/>
+                                                <constraint firstAttribute="bottom" secondItem="Uwl-8E-iqY" secondAttribute="bottom" id="yCB-zH-Sw2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Qep-14-GBI" id="Sf7-EJ-ezD"/>
+                            <outlet property="delegate" destination="Qep-14-GBI" id="qWs-yg-Gdi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="CarthageTests" id="RYG-Yf-G6C"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vk1-gk-vuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="248" y="129"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BNs-7q-DP1">
+            <objects>
+                <navigationController id="KgC-U2-J7j" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fWo-4P-UoC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Qep-14-GBI" kind="relationship" relationship="rootViewController" id="uFn-Xn-ueS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3E9-Lk-Ays" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-705" y="129"/>
         </scene>
     </scenes>
 </document>

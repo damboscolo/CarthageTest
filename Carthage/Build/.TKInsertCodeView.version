@@ -1,0 +1,9 @@
+{
+  "commitish" : "1.0.1",
+  "iOS" : [
+    {
+      "hash" : "1fd15e63ce5f6f1341974c8e040f3bf3f452e53c9be4310adf7a5d8c0b311016",
+      "name" : "TKInsertCodeView"
+    }
+  ]
+}

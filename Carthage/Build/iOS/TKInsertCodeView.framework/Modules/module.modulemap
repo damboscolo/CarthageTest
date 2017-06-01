@@ -1,0 +1,10 @@
+framework module TKInsertCodeView {
+  umbrella header "TKInsertCodeView.h"
+
+  export *
+  module * { export * }
+}
+
+module TKInsertCodeView.Swift {
+    header "TKInsertCodeView-Swift.h"
+}

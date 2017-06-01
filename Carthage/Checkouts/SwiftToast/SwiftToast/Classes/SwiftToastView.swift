@@ -8,41 +8,56 @@
 
 import UIKit
 
-protocol SwiftToastViewDelegate {
-    func swiftToastViewDidTouchUpInside(_ swiftToastView: SwiftToastView)
+public protocol SwiftToastViewProtocol: class {
+    func nib() -> SwiftToastViewProtocol?
+    func configure(with toast: SwiftToastProtocol)
 }
 
-class SwiftToastView: UIView {
+class SwiftToastView: UIView, SwiftToastViewProtocol {
     
-    var delegate: SwiftToastViewDelegate?
-
     // MARK:- Outlets
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var viewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
     
     // MARK:- Initializers
     
-    class func nib() -> SwiftToastView? {
-        return Constants.bundle?.loadNibNamed("SwiftToastView", owner: self, options: nil)?.first as? SwiftToastView
+    func nib() -> SwiftToastViewProtocol? {
+        let podBundle = Bundle(for: SwiftToastView.self)
+        guard let bundleURL = podBundle.url(forResource: "SwiftToast", withExtension: "bundle"), let bundle = Bundle(url: bundleURL) else {
+            return nil
+        }
+        return bundle.loadNibNamed("SwiftToastView", owner: self, options: nil)?.first as? SwiftToastView
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toastViewButtonTouchUpInside(_:))))
-    }
+    // MARK:- Configure
     
-    // MARK:- Configuration
-    
-    func configure(with message: String, image: UIImage?, color: UIColor) {
-        titleLabel.text = message
-        imageView.image = image
-        backgroundColor = color
-    }
-    
-    // MARK:- Actions
-    
-    @objc private func toastViewButtonTouchUpInside(_ sender: UIGestureRecognizer) {
-        delegate?.swiftToastViewDidTouchUpInside(self)
+    func configure(with toast: SwiftToastProtocol) {
+        guard let toast = toast as? SwiftToast else {
+            return
+        }
+        titleLabel.text = toast.text
+        titleLabel.textAlignment = toast.textAlignment
+        titleLabel.font = toast.font
+        backgroundColor = toast.backgroundColor
+        isUserInteractionEnabled = toast.isUserInteractionEnabled
+        
+        if let image = toast.image {
+            imageView.image = image
+            imageView.isHidden = false
+        } else {
+            imageView.isHidden = true
+        }
+        
+        switch toast.style {
+        case .statusBar:
+            viewTopConstraint.constant = 0.0
+            viewBottomConstraint.constant = 0.0
+        default:
+            viewTopConstraint.constant = 25.0
+            viewBottomConstraint.constant = 16.0
+        }
     }
 }
